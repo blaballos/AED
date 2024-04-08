@@ -1,5 +1,7 @@
 #include <iostream>
+using namespace std;
 
 int main() {
-    std::cout << "Hello, World!\n";
+    cout << "Hola Mundo" << endl;
+    return 0;
 }
