@@ -1,5 +1,5 @@
-*Repositorio de Algoritmos y Estructura de Datos* <br> <br>
+# Repositorio de Algoritmos y Estructura de Datos UTN
 
-ALUMNO: Laballos Brandon<br>
-PROFESOR: Lic. José María Sola <br>
+ALUMNO: Laballos Brandon  
+PROFESOR: Lic. José María Sola  
 COMISIÓN: K1253
