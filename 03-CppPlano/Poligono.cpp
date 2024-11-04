@@ -39,3 +39,7 @@ void setPoint(Poligono& polig, Punto point, unsigned index) {
     assert(index < MAX_LADOS);
     polig.puntos.at(index) = point;
 }
+
+unsigned getLados(const Poligono& polig) {
+    return polig.lados;
+}
