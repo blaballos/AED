@@ -25,3 +25,12 @@ void addPoint(Poligono& polig, Punto point, unsigned index) {
         polig.puntos.at(i) = polig.puntos.at(i - 1);
     }
 }
+
+void removePoint(Poligono& polig, unsigned index) {
+    assert(index < MAX_LADOS);
+    
+    for (int i = index; i < polig.lados; i++) {
+        polig.puntos.at(i) = polig.puntos.at(i + 1);
+    }
+    polig.lados--;
+}
