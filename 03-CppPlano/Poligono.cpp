@@ -16,3 +16,9 @@ Punto getPoint(const Poligono&, unsigned);
 int main() {
 
 }
+
+void addPoint(Poligono& polig, Punto point, unsigned index) {
+    assert(index < MAX_LADOS);
+    polig.puntos.at(index) = point;
+    polig.lados++;
+}
