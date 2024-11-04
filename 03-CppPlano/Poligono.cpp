@@ -19,6 +19,9 @@ int main() {
 
 void addPoint(Poligono& polig, Punto point, unsigned index) {
     assert(index < MAX_LADOS);
-    polig.puntos.at(index) = point;
     polig.lados++;
+
+    for (int i = polig.lados; i > index; i--) {
+        polig.puntos.at(i) = polig.puntos.at(i - 1);
+    }
 }
