@@ -17,3 +17,9 @@ Poligono& setPunto (Poligono&, unsigned, Punto);
 int main() {
 
 }
+
+unsigned getSides (const Poligono& poligono) {
+    int sides {};
+    for (auto aux = poligono.primerNodo; aux; aux = aux->siguienteNodo) {sides++;}
+    return sides;
+}
