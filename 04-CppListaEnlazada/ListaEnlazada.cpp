@@ -23,3 +23,9 @@ unsigned getSides (const Poligono& poligono) {
     for (auto aux = poligono.primerNodo; aux; aux = aux->siguienteNodo) {sides++;}
     return sides;
 }
+
+Punto getPunto (const Poligono& poligono, unsigned index) {
+    Nodo *aux = poligono.primerNodo;
+    for (int i = 0; i < index; i++) {aux = aux->siguienteNodo;}
+    return aux->punto;
+}
