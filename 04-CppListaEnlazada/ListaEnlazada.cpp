@@ -10,9 +10,9 @@ struct Nodo {
 
 unsigned getSides (const Poligono&);
 Punto getPunto (const Poligono&, unsigned);
+Poligono& setPunto (Poligono&, unsigned, Punto);
 Poligono& insertInIndex (Poligono&, unsigned, Punto);
 Poligono& removeInIndex (Poligono&, unsigned);
-Poligono& setPunto (Poligono&, unsigned, Punto);
 
 int main() {
 
@@ -28,4 +28,11 @@ Punto getPunto (const Poligono& poligono, unsigned index) {
     Nodo *aux = poligono.primerNodo;
     for (int i = 0; i < index; i++) {aux = aux->siguienteNodo;}
     return aux->punto;
+}
+
+Poligono& setPunto (Poligono& poligono, unsigned index, Punto punto) {
+    Nodo *aux = poligono.primerNodo;
+    for (int i = 0; i < index; i++) {aux = aux->siguienteNodo;}
+    aux->punto = punto;
+    return poligono;
 }
