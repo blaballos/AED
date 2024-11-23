@@ -36,3 +36,23 @@ Poligono& setPunto (Poligono& poligono, unsigned index, Punto punto) {
     aux->punto = punto;
     return poligono;
 }
+
+Poligono& insertInIndex (Poligono& poligono, unsigned index, Punto punto) {
+    Nodo *nodoNuevo = new Nodo();
+    nodoNuevo->punto = punto;
+
+    if (index == 0) {
+        nodoNuevo->siguienteNodo = poligono.primerNodo;
+        poligono.primerNodo = nodoNuevo;
+
+        return poligono;
+    } else {
+        Nodo *aux = poligono.primerNodo;
+        for (int i = 0; i < index - 1; i++) {aux = aux->siguienteNodo;}
+        
+        nodoNuevo->siguienteNodo = aux->siguienteNodo;
+        aux->siguienteNodo = nodoNuevo;
+
+        return poligono;
+    }
+}
