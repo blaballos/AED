@@ -56,3 +56,20 @@ Poligono& insertInIndex (Poligono& poligono, unsigned index, Punto punto) {
         return poligono;
     }
 }
+
+Poligono& removeInIndex (Poligono& poligono, unsigned index) {
+    Nodo *aux =poligono.primerNodo;
+    
+    if (index == 0) {
+        poligono.primerNodo = aux->siguienteNodo;
+        delete aux;
+    } else {
+        for (int i = 0; i < index - 1; i++) {aux = aux->siguienteNodo;}
+
+        Nodo *nodoToDelete = aux->siguienteNodo;
+        aux->siguienteNodo = nodoToDelete->siguienteNodo;
+        delete nodoToDelete;
+    }
+
+    return poligono;
+}
